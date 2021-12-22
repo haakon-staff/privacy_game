@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What is the name of the company?",
+        "answer": "Google",
+        "clue":"Look at first line"
+    },
+    {
+        "question": "What is the name of the CEO?",
+        "answer": "Peter",
+        "clue":"ctrl + f CEO"
+    }
+]

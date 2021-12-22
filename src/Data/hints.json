@@ -1,0 +1,14 @@
+[
+    {
+        "linkname": "myurl",
+        "content": "lorem ipsum0"
+    },
+    {
+        "linkname": "myurl2",
+        "content": "lorem ipsum2"
+    },
+    {
+        "linkname": "myurl3",
+        "content": "lorem ipsum3"
+    }
+]

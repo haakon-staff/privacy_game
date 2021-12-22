@@ -1,0 +1,14 @@
+[
+    {
+        "question": "What is your name?",
+        "inputType": "text"
+    },
+    {
+        "question": "Will you allow GPS?",
+        "inputType":"yes/no"
+    },
+    {
+        "question": "Will you allow us to collect browser history?",
+        "inputType":"yes/no"
+    }
+]
