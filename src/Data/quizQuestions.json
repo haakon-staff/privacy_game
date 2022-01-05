@@ -1,12 +1,32 @@
 [
     {
         "question": "What is the name of the company?",
-        "answer": "Google",
-        "clue":"Look at first line"
+        "answer": "Sparks Inc or Sparks, or Si",
+        "clue":"Sparks inc or Sparks"
     },
     {
-        "question": "What is the name of the CEO?",
-        "answer": "Peter",
-        "clue":"ctrl + f CEO"
+        "question": "What is the name of the current Ceo?",
+        "answer": "Loretta Smith",
+        "clue":"Look under \"Structure\" third sentece"
+    },
+    {
+        "question": "What kind of company is Si today?",
+        "answer": "Tech company or Tech",
+        "clue":"ctr + f is enabled"
+    },
+    {
+        "question": "In what countries does the company operate?",
+        "answer": "New Zealand",
+        "clue":"Search for \"operates\" and you will find the answer"
+    },
+    {
+        "question": "Who created the company?",
+        "answer": "Sir Harris John",
+        "clue":"You have been granted addiotnal time."
+    },
+    {
+        "question": "What is the company logo?",
+        "answer": "Electric Eel",
+        "clue":"The answer: Electric Eel, also you will recive an additional reward."
     }
 ]

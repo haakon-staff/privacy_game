@@ -5,3 +5,7 @@
 .Clue{
     border: thin solid green;
 }
+
+.Hint-Text{
+    font-size: 25px;
+}

@@ -27,9 +27,13 @@ const Frontpage = ( props ) => {
                         <>
                             <h1>Privacy game</h1>
                             <p className="Sidemargin">Your objetive is try to solve as many tasks as possible within the timelimit. <br /><br />
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sapien lorem, pretium id mi quis, volutpat lacinia lectus. In eget ipsum nunc. Pellentesque tellus lorem, porttitor id massa sit amet, hendrerit suscipit elit. Sed vulputate eleifend augue sed auctor. Sed tempus nisi et pellentesque lobortis. Nam id pellentesque neque. Phasellus commodo nibh nec neque fringilla tristique et at nisi. Fusce pharetra orci at molestie scelerisque. Nam luctus felis in neque accumsan, vitae scelerisque elit blandit. Donec egestas mattis mauris ac placerat. Sed congue lectus nisl, et vehicula est tempus eu. Duis iaculis, ligula quis dapibus tincidunt, sapien ex convallis libero, sed facilisis augue augue et diam.
-                                Ut finibus consectetur odio, sit amet facilisis leo mollis et. Nulla id neque blandit, commodo dolor ultrices, porta nunc. Curabitur at magna lectus. Integer mauris magna, consectetur sed ex tincidunt, sollicitudin finibus nulla. Sed viverra enim sed nunc hendrerit, sit amet ultricies ligula dapibus. Sed interdum sagittis sem sagittis aliquet. Quisque a nibh ut arcu gravida iaculis in nec lorem. Phasellus in tortor leo. Sed sed finibus risus. In condimentum gravida eros. Pellentesque ex enim, lobortis a massa sed, cursus eleifend nisi.
+                                This is a test to see how good you are at finding important information within a short time period. You will have 6 mintues to answer 6 questions about a company. When you click on the "Start" button the timer will start and the test has started.
+                                There are 3 links "Company information", "Structure", "Trivia" all the neseccary information will be found within those 3 links, however they contain information that is not relevant to the question, so your objetive is to find the correct information among the irrelevant.
+                                Lastly, if you are stuck, there is a <b>"Clue"</b>button, this you can use on any of the questions, howewer to get help, some information must be given back.
                             </p>
+                            <b>A reward will be given to the particpant with the most corrct answer within the shortest time, Be quick and precise.</b>
+                            <br/>
+                            <br/>
                             <button className="buttonLayout" onClick={() => {
                                 props.sendTos(formProps.values)
                                 routeChange();

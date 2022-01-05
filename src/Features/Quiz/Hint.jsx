@@ -15,10 +15,10 @@ const Hint = () => {
     const {content} = hints.find(hint => hint.linkname === linkname);
 
     return (
-        <div>
-            link is {linkname} 
+        <div className="Hint-Text">
+            {linkname} 
             <br/>
-            content {content}
+            {content.map((e) => <p>{e}<br/></p>)}
         </div>
     )
 }
