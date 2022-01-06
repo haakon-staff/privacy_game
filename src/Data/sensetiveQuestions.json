@@ -10,5 +10,17 @@
     {
         "question": "Will you allow us to collect browser history?",
         "inputType":"yes/no"
+    },
+    {
+        "question": "Will you allow us to collect political data?",
+        "inputType":"yes/no"
+    },
+    {
+        "question": "Will you allow us to collect search history?",
+        "inputType":"yes/no"
+    },
+    {
+        "question": "Write your social securty number, rewards: the answer + additional reward afer quiz.",
+        "inputType":"yes/no"
     }
 ]
