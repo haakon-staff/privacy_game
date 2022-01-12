@@ -21,6 +21,6 @@
     },
     {
         "question": "Write your social securty number, rewards: the answer + additional reward afer quiz.",
-        "inputType":"yes/no"
+        "inputType":"text"
     }
 ]

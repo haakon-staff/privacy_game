@@ -10,6 +10,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ClueFrame from './Features/Quiz/ClueFrame';
 
 function App() {
 
@@ -19,16 +20,18 @@ function App() {
   console.log(answers)
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Frontpage sendTos={setTos}/>} />
-          <Route path="/quiz" element={<Quiz setAnswers={setAnswers} answers={answers}/>} />
-          <Route path="/final" element={<Outdex tos={tos} answers={answers}/>} />
-          <Route path="/hint/:linkname" element={<Hint/>} />
-        </Routes>
-      </div>
-    </Router>
+    <ClueFrame>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Frontpage sendTos={setTos} />} />
+            <Route path="/quiz" element={<Quiz setAnswers={setAnswers} answers={answers} />} />
+            <Route path="/final" element={<Outdex tos={tos} answers={answers} />} />
+            <Route path="/hint/:linkname" element={<Hint />} />
+          </Routes>
+        </div>
+      </Router>
+    </ClueFrame>
   );
 }
 
