@@ -1,26 +1,34 @@
 [
     {
         "question": "What is your name?",
-        "inputType": "text"
+        "inputType": "text",
+        "nonCompromisedAnswer": "Deny",
+        "compromisedAnswer": "Submit"
     },
     {
         "question": "Will you allow GPS?",
-        "inputType":"yes/no"
+        "nonCompromisedAnswer": "no",
+        "compromisedAnswer": "yes"
     },
     {
-        "question": "Will you allow us to collect browser history?",
-        "inputType":"yes/no"
+        "question": "Will you not allow us to collect browser history?",
+        "nonCompromisedAnswer": "yes",
+        "compromisedAnswer": "no"
     },
     {
-        "question": "Will you allow us to collect political data?",
-        "inputType":"yes/no"
+        "question": "Will you not not allow us to not collect political data?",
+        "nonCompromisedAnswer": "yes",
+        "compromisedAnswer": "no"
     },
     {
         "question": "Will you allow us to collect search history?",
-        "inputType":"yes/no"
+        "nonCompromisedAnswer": "no",
+        "compromisedAnswer": "yes"
     },
     {
         "question": "Write your social securty number, rewards: the answer + additional reward afer quiz.",
-        "inputType":"text"
+        "inputType": "text",
+        "nonCompromisedAnswer": "no",
+        "compromisedAnswer": "Submit"
     }
 ]

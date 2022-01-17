@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { ClueContext } from './ClueFrame';
+import { QuizContext } from './QuizFrame';
 
 const Clue = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,53 +21,45 @@ export default Clue
 
 
 const Popup = ({ closeFn }) => {
-    const [accepted, setAccepted] = useState(false)
-    const context = useContext(ClueContext)
+    const [inputValue, setInputValue] = useState("")
+    const clueContext = useContext(ClueContext)
+    const quizContext = useContext(QuizContext)
 
     const accept = () => {
-        setAccepted(true)
-        context.clueWasUsed()
+        if (clueContext.sensitiveQuestion.inputType === "text" && inputValue === "") {
+            return;
+        }
+        clueContext.clueWasAccepted()
+        clueContext.clueWasUsed()
     }
 
-
-    console.log("***1", context)
     return (
         <div className="popup-box">
             <div className="box">
-                {context.sensitiveQuestion.question}
-                <br />
-                {/* <MyInput sensitiveQuestion={context.sensitiveQuestion} /> */}
                 {
-                    context.sensitiveQuestion.inputType === "text"
+                    !clueContext.isUsed
                         ? <>
-                            <input type="text" />
-                        </>
-                        : <>
-                            <label>
-                                <input type="radio" value="yes" name="yesno" text="yes" />
-                                yes
-                            </label>
+                            {clueContext.sensitiveQuestion.question}
                             <br />
-                            <label>
-                                <input type="radio" value="no" name="yesno" text="no" />
-                                no
-                            </label>
-                            {/* TODO: sende svaret til rapport --> send svaret til context, implementer logikken for dette for input felt og radio buttons */}
-                        </>
-                }
-                <br />
-                {
-                    !accepted
-                        ? <>
+                            {
+                                clueContext.sensitiveQuestion.inputType === "text"
+                                && <>
+                                    <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)} />
+                                </>
+                            }
+                            <br />
                             <button onClick={() => accept()}>
-                                Accept
+                                {clueContext.sensitiveQuestion.compromisedAnswer}
                             </button>
                             <button onClick={() => closeFn()}>
-                                Deny
+                                {clueContext.sensitiveQuestion.nonCompromisedAnswer}
                             </button>
                         </>
                         : <>
-                            this is the acccepted state.
+                            Here is your clue!
+                            <br />
+                            {quizContext.current.clue}
+                            <br />
                             <button onClick={() => closeFn()}>
                                 Close
                             </button>
@@ -76,4 +69,3 @@ const Popup = ({ closeFn }) => {
         </div>
     )
 }
-
