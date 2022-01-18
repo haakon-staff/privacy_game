@@ -26,11 +26,17 @@ const Popup = ({ closeFn }) => {
     const quizContext = useContext(QuizContext)
 
     const accept = () => {
-        if (clueContext.sensitiveQuestion.inputType === "text" && inputValue === "") {
+        if (clueContext.sensitiveQuestion.inputType === "text" && clueContext.currentClueInputValue === "") {
             return;
         }
+        if (clueContext.sensitiveQuestion.inputType !== "text") {
+            console.log("***2")
+            clueContext.clueWasUsed(true)
+        }
+        else {
+            clueContext.clueWasUsed(false)
+        }
         clueContext.clueWasAccepted()
-        clueContext.clueWasUsed()
     }
 
     return (
@@ -44,7 +50,7 @@ const Popup = ({ closeFn }) => {
                             {
                                 clueContext.sensitiveQuestion.inputType === "text"
                                 && <>
-                                    <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)} />
+                                    <input type="text" value={clueContext.currentClueInputValue} onChange={e => clueContext.setCurrentClueInputValue(e.target.value)} />
                                 </>
                             }
                             <br />

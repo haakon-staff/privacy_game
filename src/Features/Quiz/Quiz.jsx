@@ -11,7 +11,6 @@ const Quiz = (props) => {
     const quizContext = useContext(QuizContext)
     const clueContext = useContext(ClueContext)
 
-    console.log(quizContext.currentInputValue)
     return (
         <div>
             <h1>The game</h1>

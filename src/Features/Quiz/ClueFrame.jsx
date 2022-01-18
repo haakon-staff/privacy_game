@@ -8,8 +8,16 @@ const ClueFrame = ({ children }) => {
     const [clueNumber, setClueNumber] = useState(0)
     const [isUsed, setIsUsed] = useState(false)
     const [isAccepted, setIsAccepted] = useState(false)
+    const [clueAnswers, setClueAnswers] = useState([]);
+    const [currentClueInputValue, setCurrentClueInputValue] = useState("");
 
-    const clueWasUsed = () => {
+    const clueWasUsed = (agreeToDataCollection) => {
+        if (agreeToDataCollection) {
+            setClueAnswers([...clueAnswers, "Accepted"])
+        }
+        else {
+            setClueAnswers([...clueAnswers, currentClueInputValue])
+        }
         setIsUsed(true)
     }
 
@@ -32,6 +40,10 @@ const ClueFrame = ({ children }) => {
         sensitiveQuestion: sensitiveQuestions[clueNumber],
         isUsed,
         isAccepted,
+        clueAnswers,
+        setClueAnswers,
+        currentClueInputValue,
+        setCurrentClueInputValue,
     }
     return (
         <ClueContext.Provider value={contextData}>
