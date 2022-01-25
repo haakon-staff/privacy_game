@@ -1,16 +1,20 @@
 import Popup from '../Components/Popup/Popup';
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Stage } from '../utils.ts';
 import Tos from '../Components/Tos';
 import ManageTos from '../Components/ManageTos';
 import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
+import QuizFrame, { QuizContext } from './Quiz/QuizFrame';
 
 const Frontpage = ( props ) => {
     const [stage, setStage] = useState(Stage.popup);
     const navigate = useNavigate();
 
+    const quizContext = useContext(QuizContext)
+
     const routeChange = () => {
+        quizContext.startTimer()
         navigate('/quiz');
     }
 
