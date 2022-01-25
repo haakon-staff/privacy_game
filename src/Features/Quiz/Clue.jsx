@@ -29,13 +29,8 @@ const Popup = ({ closeFn }) => {
         if (clueContext.sensitiveQuestion.inputType === "text" && clueContext.currentClueInputValue === "") {
             return;
         }
-        if (clueContext.sensitiveQuestion.inputType !== "text") {
-            console.log("***2")
-            clueContext.clueWasUsed(true)
-        }
-        else {
-            clueContext.clueWasUsed(false)
-        }
+        
+        clueContext.clueWasUsed(clueContext.sensitiveQuestion.inputType === "text")
         clueContext.clueWasAccepted()
     }
 

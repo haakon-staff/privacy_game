@@ -47,13 +47,9 @@ function download(strData, strMimeType) {
 
 
 const writeToFile = (tos,answers,clueanswers) => {
+    const data = JSON.stringify({tos,answers,clueanswers},null,4)
 
-    const tosdata = JSON.stringify(tos);
-    const answersdata = JSON.stringify(answers);
-    const clueanswersData = JSON.stringify(clueanswers);
-    const data = tosdata + "\n" + answersdata + "\n" + clueanswersData;
     console.log(data)
-
     download(data, 'report.txt', 'text/plain');
 }
 

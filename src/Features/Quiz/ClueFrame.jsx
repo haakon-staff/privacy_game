@@ -11,13 +11,15 @@ const ClueFrame = ({ children }) => {
     const [clueAnswers, setClueAnswers] = useState([]);
     const [currentClueInputValue, setCurrentClueInputValue] = useState("");
 
-    const clueWasUsed = (agreeToDataCollection) => {
-        if (agreeToDataCollection) {
-            setClueAnswers([...clueAnswers, "Accepted"])
+    const clueWasUsed = (isText) => {
+        const clueAnswersParamters = {
+            sensitiveQuestion: sensitiveQuestions[clueNumber].question
         }
-        else {
-            setClueAnswers([...clueAnswers, currentClueInputValue])
-        }
+
+        setClueAnswers([
+            ...clueAnswers,
+            clueAnswersParamters
+        ])
         setIsUsed(true)
     }
 
