@@ -4,6 +4,7 @@ import "./styled.css"
 import Clue from "./Clue"
 import { ClueContext } from "./ClueFrame";
 import { QuizContext } from "./QuizFrame";
+import Countdown from "./Countdown";
 
 
 const Quiz = (props) => {
@@ -13,6 +14,7 @@ const Quiz = (props) => {
 
     return (
         <div>
+            <Countdown/>
             <h1>The game</h1>
             <Hints />
             <p className="Question-text">{quizContext.current.question}</p>
