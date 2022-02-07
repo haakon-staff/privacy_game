@@ -1,28 +1,49 @@
 import Popup from '../Components/Popup/Popup';
 import React, { useState, useContext } from "react";
-import { Stage } from '../utils.ts';
 import Tos from '../Components/Tos';
 import ManageTos from '../Components/ManageTos';
 import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
-import QuizFrame, { QuizContext } from './Quiz/QuizFrame';
+import { QuizContext } from './Quiz/QuizFrame';
+import useTimer from './Quiz/useTimer';
 
-const Frontpage = ( props ) => {
+
+const Stage = {
+    main: Symbol(),
+    popup: Symbol(),
+    manage: Symbol(),
+}
+
+
+const Frontpage = (props) => {
     const [stage, setStage] = useState(Stage.popup);
+    const [timeTakenToAnwserTos, setTimeTakenToAnwserTos] = useState(undefined);
+    const tosTimer = useTimer({ autoStart: true });
     const navigate = useNavigate();
 
     const quizContext = useContext(QuizContext)
 
-    const routeChange = () => {
+
+    const closePopup = () => {
+        setTimeTakenToAnwserTos(tosTimer.getElapsedTime())
+        setStage(Stage.main)
+    }
+
+    const startQuiz = (formProps) => {
+        const tosData = {
+            ...formProps.values,
+            timeTakenToAnwserTos
+        }
+
+        props.sendTos(tosData)
         quizContext.startTimer()
         navigate('/quiz');
     }
 
- 
     return (
         <div>
             <Formik
-                initialValues={{ name: true, gps: true, browserH: true, searchH: true, searchH: true, political:true, preference:true }}
+                initialValues={{ name: true, gps: true, browserH: true, searchH: true, political: true, preference: true }}
                 enableReinitialize
                 onSubmit={() => { }}
             >
@@ -36,20 +57,17 @@ const Frontpage = ( props ) => {
                                 <b> Note</b> During the quiz, you lock in your answers by writing in the input box and clicking the "next" button, once you do this, you can <b>not</b> go back, so make sure you are confident in your answer before you click next.
                                 Lastly, if you are stuck, there is a <b>"Clue"</b>button, this you can use on any of the questions, it can be used once on each question and you can gain hints and additional benefitsgi from using this function.
                             </p>
-                            <b className="Sidemargin"> A reward will be given to the particpant with the most corrct answer within the shortest time, Be quick and precise.</b>
-                            <br/>
-                            <br/>
-                            <button className="buttonLayout" onClick={() => {
-                                props.sendTos(formProps.values)
-                                routeChange();
-                            }}>
+                            <b className="Sidemargin"> A reward will be given to the particpant with the most correct answer within the shortest time, Be quick and precise.</b>
+                            <br />
+                            <br />
+                            <button className="buttonLayout" onClick={() => startQuiz(formProps)}>
                                 Start
                             </button>
                             {stage === Stage.popup && (
-                                <Popup content={(<Tos />)} optButtonText="manage" funcButtonOpt={() => setStage(Stage.manage)} mainButtonText="accept" funcButtonMain={() => setStage(Stage.main)} />
+                                <Popup content={(<Tos />)} optButtonText="manage" funcButtonOpt={() => setStage(Stage.manage)} mainButtonText="accept" funcButtonMain={() => closePopup()} />
                             )}
                             {stage === Stage.manage && (
-                                <Popup content={(<ManageTos formProps={formProps} />)} mainButtonText="Save" funcButtonMain={() => setStage(Stage.main)} />
+                                <Popup content={(<ManageTos formProps={formProps} />)} mainButtonText="Save" funcButtonMain={() => closePopup()} />
                             )}
                         </>
                     )

@@ -21,7 +21,6 @@ export default Clue
 
 
 const Popup = ({ closeFn }) => {
-    const [inputValue, setInputValue] = useState("")
     const clueContext = useContext(ClueContext)
     const quizContext = useContext(QuizContext)
 

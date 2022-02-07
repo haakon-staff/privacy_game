@@ -1,6 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import questions from "../../Data/quizQuestions.json";
+import useTimer from './useTimer';
 
 export const QuizContext = React.createContext()
 
@@ -9,7 +10,8 @@ const QuizFrame = ({ children }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [currentInputValue, setCurrentInputValue] = useState("");
     const [answers, setAnswers] = useState([]);
-    const [startTime, setStartTime] = useState(undefined)
+    
+    const { startTimer, getElapsedTime } = useTimer()
     const navigate = useNavigate();
 
     const questionWasAnswered = () => {
@@ -29,15 +31,6 @@ const QuizFrame = ({ children }) => {
             //nullstill timer for hvert spm
             startTimer()
         }
-    }
-
-    const startTimer = () => {
-        setStartTime(new Date().getTime() / 1000)
-    }
-
-    const getElapsedTime = () => {
-        const currentTime = new Date().getTime() / 1000
-        return currentTime - startTime
     }
 
     const contextData = {

@@ -11,7 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 import ClueFrame from './Features/Quiz/ClueFrame';
-import QuizFrame, { QuizContext } from './Features/Quiz/QuizFrame';
+import QuizFrame from './Features/Quiz/QuizFrame';
 
 function App() {
 

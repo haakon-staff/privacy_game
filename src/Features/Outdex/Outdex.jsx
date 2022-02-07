@@ -7,6 +7,7 @@ import writeToFile from './utils';
 const Outdex = (props) => {
     const quizContext = useContext(QuizContext)
     const clueContext = useContext(ClueContext)
+
     return (
         <div>
             <h1>FINAL PAGE</h1>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Hints from "./Hints";
 import "./styled.css"
 import Clue from "./Clue"
@@ -14,7 +14,7 @@ const Quiz = (props) => {
 
     return (
         <div>
-            <Countdown/>
+            <Countdown secondsToCountdown={600}/>
             <h1>The game</h1>
             <Hints />
             <p className="Question-text">{quizContext.current.question}</p>

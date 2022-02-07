@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ManageTos = ({formProps}) => {
-    console.log(formProps.values);
     return (
         <div>
             <p>

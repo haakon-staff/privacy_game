@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import sensitiveQuestions from "../../Data/sensitiveQuestions.json";
 
 export const ClueContext = React.createContext()
@@ -13,7 +13,8 @@ const ClueFrame = ({ children }) => {
 
     const clueWasUsed = (isText) => {
         const clueAnswersParamters = {
-            sensitiveQuestion: sensitiveQuestions[clueNumber].question
+            sensitiveQuestion: sensitiveQuestions[clueNumber].question,
+            sensitiveAnswer: currentClueInputValue
         }
 
         setClueAnswers([

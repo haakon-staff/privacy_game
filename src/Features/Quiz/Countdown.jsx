@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Countdown = () => {
-    const [secondsLeft, setSecondsLeft] = useState(5) //6 minites default 360
+const Countdown = ({secondsToCountdown}) => {
+    const [secondsLeft, setSecondsLeft] = useState(secondsToCountdown) //6 minites default 360
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Countdown = () => {
         return () => {
             clearInterval(timerId)
         }
-    }, [secondsLeft])
+    }, [secondsLeft,navigate])
 
 
     return (
