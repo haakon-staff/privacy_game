@@ -21,7 +21,7 @@ const QuizFrame = ({ children }) => {
             elapsedTime: getElapsedTime()
         }
         setAnswers([...answers, questionAnswersParamaters])
-
+        setCurrentInputValue("")
 
         if (questions.length - 1 === currentQuestionIndex) {
             navigate('/final');

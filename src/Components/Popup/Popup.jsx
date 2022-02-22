@@ -1,18 +1,18 @@
 import React from "react";
-import "./style.css"
 
 const Popup = ({ content, optButtonText, mainButtonText, funcButtonOpt, funcButtonMain }) => {
     return (
-        <div className="popup-box">
-            <div className="box">
-                {content}
-                <div className="buttonContainer">
+        <div className="popup-background">
+            <div className="popup-box">
+                <h2>Cookie settings</h2>
+                <p>{content}</p>
+                <div className="button-container">
                     {optButtonText && (
-                        <button onClick={funcButtonOpt}>
+                        <button className="secondary-button" onClick={funcButtonOpt}>
                             {optButtonText}
                         </button>
                     )}
-                    <button style={{ backgroundColor: "darkGreen"}} onClick={funcButtonMain}>
+                    <button className="primary-button" onClick={funcButtonMain}>
                         {mainButtonText}
                     </button>
                 </div>

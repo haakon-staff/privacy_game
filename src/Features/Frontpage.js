@@ -60,9 +60,11 @@ const Frontpage = (props) => {
                             <b className="Sidemargin"> A reward will be given to the particpant with the most correct answer within the shortest time, Be quick and precise.</b>
                             <br />
                             <br />
-                            <button className="buttonLayout" onClick={() => startQuiz(formProps)}>
-                                Start
-                            </button>
+                            <div className="button-container">
+                                <button className="primary-button" onClick={() => startQuiz(formProps)}>
+                                    Start
+                                </button>
+                            </div>
                             {stage === Stage.popup && (
                                 <Popup content={(<Tos />)} optButtonText="manage" funcButtonOpt={() => setStage(Stage.manage)} mainButtonText="accept" funcButtonMain={() => closePopup()} />
                             )}

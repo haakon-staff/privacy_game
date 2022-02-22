@@ -1,4 +1,3 @@
-import './App.css';
 import Frontpage from './Features/Frontpage';
 import Quiz from "./Features/Quiz/Quiz"
 import React, { useState } from "react";
@@ -18,20 +17,22 @@ function App() {
   const [tos, setTos] = useState({});
 
   return (
-    <Router>
-      <QuizFrame>
-        <ClueFrame>
-          <div className="App">
-            <Routes>
-              <Route path="/" element={<Frontpage sendTos={setTos} />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/final" element={<Outdex tos={tos} />} />
-              <Route path="/hint/:linkname" element={<Hint />} />
-            </Routes>
-          </div>
-        </ClueFrame>
-      </QuizFrame>
-    </Router>
+    <div className="main-content">
+      <Router>
+        <QuizFrame>
+          <ClueFrame>
+            <div className="App">
+              <Routes>
+                <Route path="/" element={<Frontpage sendTos={setTos} />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/final" element={<Outdex tos={tos} />} />
+                <Route path="/hint/:linkname" element={<Hint />} />
+              </Routes>
+            </div>
+          </ClueFrame>
+        </QuizFrame>
+      </Router>
+    </div>
   );
 }
 

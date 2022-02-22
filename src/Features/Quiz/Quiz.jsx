@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Hints from "./Hints";
-import "./styled.css"
 import Clue from "./Clue"
 import { ClueContext } from "./ClueFrame";
 import { QuizContext } from "./QuizFrame";
@@ -14,17 +13,20 @@ const Quiz = (props) => {
 
     return (
         <div>
-            <Countdown secondsToCountdown={600}/>
             <h1>The game</h1>
             <Hints />
             <p className="Question-text">{quizContext.current.question}</p>
-            <input type="text" onChange={(event) => quizContext.setCurrentInputValue(event.target.value)} />
-            
+            <input type="text" onChange={(event) => quizContext.setCurrentInputValue(event.target.value)} value={quizContext.currentInputValue}/>
+
             <button onClick={() => { quizContext.questionWasAnswered(); clueContext.incrementIfUsed() }}>
                 Next question!
             </button>
             <br />
             <Clue />
+            <br />
+            <div>
+                <Countdown secondsToCountdown={600} />
+            </div>
         </div>
     )
 }
