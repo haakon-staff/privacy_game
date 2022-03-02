@@ -12,22 +12,28 @@ const Quiz = (props) => {
     const clueContext = useContext(ClueContext)
 
     return (
-        <div>
-            <h1>The game</h1>
-            <Hints />
-            <p className="Question-text">{quizContext.current.question}</p>
-            <input type="text" onChange={(event) => quizContext.setCurrentInputValue(event.target.value)} value={quizContext.currentInputValue}/>
+        <>
+            <div className="quiz-page">
+                <h1>The game</h1>
+                <Hints />
+                <p className="question-text">{quizContext.current.question}</p>
+                <div>
+                    <input type="text" onChange={(event) => quizContext.setCurrentInputValue(event.target.value)} value={quizContext.currentInputValue} />
 
-            <button onClick={() => { quizContext.questionWasAnswered(); clueContext.incrementIfUsed() }}>
-                Next question!
-            </button>
-            <br />
-            <Clue />
-            <br />
+                    <button className="secondary-button" onClick={() => { quizContext.questionWasAnswered(); clueContext.incrementIfUsed() }}>
+                        Next question!
+                    </button>
+                </div>
+                <br />
+                <Clue />
+                <br />
+
+            </div>
+
             <div>
                 <Countdown secondsToCountdown={600} />
             </div>
-        </div>
+        </>
     )
 }
 

@@ -3,10 +3,10 @@ import hints from "../../Data/hints.json";
 
 const Hints = () => {
     return (
-        <div className="Hints">
+        <div className="hints">
             <h2>Hints</h2>
             {
-                hints.map((hint, ix)=> <div key={ix}><a href={"hint/" + hint.linkname} target="hint">{hint.linkname}</a></div>) 
+                hints.map((hint, ix)=> <a key={ix} href={"hint/" + hint.linkname} target="hint">{hint.linkname}</a>) 
             }
         </div>
     )

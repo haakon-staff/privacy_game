@@ -9,11 +9,14 @@ const Hint = () => {
     const { content } = hints.find(hint => hint.linkname === linkname);
 
     return (
-        <div className="Hint-Text">
-            {linkname}
-            <br />
-            {content.map((e) => <p>{e}<br /></p>)}
-        </div>
+        <>
+            <h2>{linkname}</h2>
+            <div className="Hint-Text">
+
+                <br />
+                {content.map((e) => <p>{e}<br /></p>)}
+            </div>
+        </>
     )
 }
 

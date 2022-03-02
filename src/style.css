@@ -1,3 +1,10 @@
+@font-face {
+    font-family:"Seven Segment";
+    src: url(./Artifacts/DSEG7Classic-BoldItalic.ttf);
+    /* https://www.keshikan.net/fonts-e.html ALL CREDIT TO THIS SITE */
+}
+
+
 html{
     font-family: sans-serif;
     font-size: 16px;
@@ -8,20 +15,23 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
-button{
-    margin: 0.5em 0.5em;
+button,
+input{
+    margin: 0 0.5em;
+    border: thin solid lightgrey;
 
 }
 
-.popup-box{
-    background-color:whitesmoke;
-    border: 1px solid black;
-    border-radius: 0.5em;
-
+button:hover,
+input:hover,
+input:focus{
+    border: thin solid gray;
+    
 }
 
-.popup-background{
-    background: #FFFFFFCC;
+input:focus{
+    outline: none;
+
 }
 
 .button-container{
@@ -34,10 +44,73 @@ button{
     color: white;
 }
 
-.secondary-button{
-
+.bait-button{
+    background-color: lightgreen;
+    min-width: 10em;
+    padding: 0.5em;
+    font-weight: bold;
 }
+
+
+.secondary-button{
+    background-color: transparent;
+}
+
+.popup-box{
+    background-color:whitesmoke;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0 0 3em #00000077;
+}
+
+.popup-background{
+    background: #FFFFFFCC;
+}
+
+
+
 
 .main-content{
     background-color: whitesmoke;
+}
+
+.quiz-page{
+    display:grid;
+    
+}
+
+.quiz-page>*{
+    place-self:center;
+    
+}
+
+.hints{
+}
+
+.hints>a:not(:last-of-type)::after{
+    content: "|";
+    font-size: 1.8em;
+    vertical-align:-0.1em;
+    padding: 0 0.15em;
+
+}
+
+.question-text{
+    font-size: 1.6em;
+}
+
+.countdown{
+    font-family: "Seven Segment";
+    line-height: 1.5em;
+    font-size: 5em;
+    display: grid;
+}
+
+.countdown>span{
+    place-self: center;
+    background:black;
+    color: red;
+    text-shadow: 0 0 0.1em red;
+    padding: 0.2em 0.4em;
+    
 }

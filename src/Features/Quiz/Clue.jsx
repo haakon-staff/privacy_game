@@ -9,8 +9,8 @@ const Clue = () => {
     }
 
     return (
-        <div className="Clue">
-            <button className="Clue-button" onClick={() => click()} >Clue!</button>
+        <div className="clue">
+            <button className="bait-button" onClick={() => click()} >Clue!</button>
             {isOpen && <Popup closeFn={() => setIsOpen(false)} />}
         </div>
     )
@@ -60,7 +60,7 @@ const Popup = ({ closeFn }) => {
                             <br />
                             {quizContext.current.clue}
                             <br />
-                            <button onClick={() => closeFn()}>
+                            <button className="primary-button" onClick={() => closeFn()}>
                                 Close
                             </button>
                         </>
