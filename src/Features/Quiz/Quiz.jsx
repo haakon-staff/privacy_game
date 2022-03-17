@@ -14,7 +14,7 @@ const Quiz = (props) => {
     return (
         <>
             <div className="quiz-page">
-                <h1>The game</h1>
+                <h1>Information seeker</h1>
                 <Hints />
                 <p className="question-text">{quizContext.current.question}</p>
                 <div>

@@ -28,14 +28,14 @@ const Popup = ({ closeFn }) => {
         if (clueContext.sensitiveQuestion.inputType === "text" && clueContext.currentClueInputValue === "") {
             return;
         }
-        
+
         clueContext.clueWasUsed(clueContext.sensitiveQuestion.inputType === "text")
         clueContext.clueWasAccepted()
     }
 
     return (
-        <div className="popup-box">
-            <div className="box">
+        <div className="popup-background">
+            <div className="popup-box">
                 {
                     !clueContext.isUsed
                         ? <>

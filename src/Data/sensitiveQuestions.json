@@ -11,14 +11,14 @@
         "compromisedAnswer": "yes"
     },
     {
-        "question": "Will you not allow us to collect browser history?",
-        "nonCompromisedAnswer": "yes",
-        "compromisedAnswer": "no"
+        "question": "Will you allow us to collect browser history?",
+        "nonCompromisedAnswer": "no",
+        "compromisedAnswer": "yes"
     },
     {
-        "question": "Will you not not allow us to not collect political data?",
-        "nonCompromisedAnswer": "yes",
-        "compromisedAnswer": "no"
+        "question": "Will you allow us to collect political data?",
+        "nonCompromisedAnswer": "no",
+        "compromisedAnswer": "yes"
     },
     {
         "question": "Will you allow us to collect search history?",

@@ -5,7 +5,7 @@ import Outdex from './Features/Outdex/Outdex';
 import Hint from './Features/Quiz/Hint';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";

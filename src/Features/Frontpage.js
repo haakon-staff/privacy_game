@@ -50,14 +50,19 @@ const Frontpage = (props) => {
                 {(formProps) => {
                     return (
                         <>
-                            <h1>Privacy game</h1>
-                            <p className="Sidemargin">Your objetive is try to solve as many tasks as possible within the timelimit. <br /><br />
-                                This is a test to see how good you are at finding important information within a short time period. You will have 6 mintues to answer 6 questions about a company. When you click on the "Start" button the timer will start and the test has started.
-                                There are 3 links "Company information", "Structure", and "Trivia". All the neseccary information will be found within those 3 links, however they contain information that is not relevant to the question, so your objetive is to find the correct information among the irrelevant.
-                                <b> Note</b> During the quiz, you lock in your answers by writing in the input box and clicking the "next" button, once you do this, you can <b>not</b> go back, so make sure you are confident in your answer before you click next.
-                                Lastly, if you are stuck, there is a <b>"Clue"</b>button, this you can use on any of the questions, it can be used once on each question and you can gain hints and additional benefitsgi from using this function.
+                            <h1>Information seeker</h1>
+                            <p className="Sidemargin"> <b>Your objetive: </b> Answer all the questions before you run out of time <br /><br />
+
+                                This is a test to measure how good you are at finding key information within a short time period. On the next page you will see the following:
+                                <br/>
+                                <b>An input field:</b> Here you can insert your answer to the question, by clicking "next" your answer is locked, you can <b>not</b> go back once you have clicked "next", so be confident in your answer!
+                                <br/>
+                                <b>Company information:</b> Here there are 4 links, with information that contain the answers to the questions. However the links also contain alot of information that is not relevant to the answer. This is the tricky part!
+                                <br/>
+                                <b>Clue!</b> Are you stuck? Or do you wish to find the answer quick? Use the clue button to get help. You can only use it once on each question, but you can use it on all questions. Some terms may apply when using "Clue!", but there are no punishments.
+
                             </p>
-                            <b className="Sidemargin"> A reward will be given to the particpant with the most correct answer within the shortest time, Be quick and precise.</b>
+                            <b className="Sidemargin"> A reward will be given to the participant with the most correct answer within the shortest time! Be quick and precise. </b>
                             <br />
                             <br />
                             <div className="button-container">
