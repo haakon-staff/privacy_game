@@ -53,7 +53,7 @@ const Frontpage = (props) => {
                             <h1>Information seeker</h1>
                             <p className="Sidemargin"> <b>Your objetive: </b> Answer all the questions before you run out of time <br /><br />
 
-                                This is a test to measure how good you are at finding key information within a short time period. On the next page you will see the following:
+                                This is a test to measure how good you are at finding key information within a short time period. Your task is to answer a set of questions about a company. On the next page you will see the following:
                                 <br/>
                                 <b>An input field:</b> Here you can insert your answer to the question, by clicking "next" your answer is locked, you can <b>not</b> go back once you have clicked "next", so be confident in your answer!
                                 <br/>
