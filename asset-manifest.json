@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/privacy_game/static/css/main.663990ce.chunk.css",
-    "main.js": "/privacy_game/static/js/main.91e22187.chunk.js",
-    "main.js.map": "/privacy_game/static/js/main.91e22187.chunk.js.map",
+    "main.js": "/privacy_game/static/js/main.9e9ac5fb.chunk.js",
+    "main.js.map": "/privacy_game/static/js/main.9e9ac5fb.chunk.js.map",
     "runtime-main.js": "/privacy_game/static/js/runtime-main.c1fdee46.js",
     "runtime-main.js.map": "/privacy_game/static/js/runtime-main.c1fdee46.js.map",
     "static/js/2.73517765.chunk.js": "/privacy_game/static/js/2.73517765.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c1fdee46.js",
     "static/js/2.73517765.chunk.js",
     "static/css/main.663990ce.chunk.css",
-    "static/js/main.91e22187.chunk.js"
+    "static/js/main.9e9ac5fb.chunk.js"
   ]
 }
