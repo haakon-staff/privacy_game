@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/privacy_game/static/css/main.663990ce.chunk.css",
-    "main.js": "/privacy_game/static/js/main.9e9ac5fb.chunk.js",
-    "main.js.map": "/privacy_game/static/js/main.9e9ac5fb.chunk.js.map",
+    "main.css": "/privacy_game/static/css/main.2d627619.chunk.css",
+    "main.js": "/privacy_game/static/js/main.9c2234d6.chunk.js",
+    "main.js.map": "/privacy_game/static/js/main.9c2234d6.chunk.js.map",
     "runtime-main.js": "/privacy_game/static/js/runtime-main.c1fdee46.js",
     "runtime-main.js.map": "/privacy_game/static/js/runtime-main.c1fdee46.js.map",
     "static/js/2.73517765.chunk.js": "/privacy_game/static/js/2.73517765.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.0176c3e3.chunk.js": "/privacy_game/static/js/3.0176c3e3.chunk.js",
     "static/js/3.0176c3e3.chunk.js.map": "/privacy_game/static/js/3.0176c3e3.chunk.js.map",
     "index.html": "/privacy_game/index.html",
-    "static/css/main.663990ce.chunk.css.map": "/privacy_game/static/css/main.663990ce.chunk.css.map",
+    "static/css/main.2d627619.chunk.css.map": "/privacy_game/static/css/main.2d627619.chunk.css.map",
     "static/js/2.73517765.chunk.js.LICENSE.txt": "/privacy_game/static/js/2.73517765.chunk.js.LICENSE.txt",
     "static/media/style.css": "/privacy_game/static/media/DSEG7Classic-BoldItalic.ea4e93b1.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.c1fdee46.js",
     "static/js/2.73517765.chunk.js",
-    "static/css/main.663990ce.chunk.css",
-    "static/js/main.9e9ac5fb.chunk.js"
+    "static/css/main.2d627619.chunk.css",
+    "static/js/main.9c2234d6.chunk.js"
   ]
 }
